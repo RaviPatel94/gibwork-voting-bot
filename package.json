@@ -1,0 +1,13 @@
+{
+  "name": "discord-role-sync",
+  "version": "1.0.0",
+  "description": "One-shot local script to reset and grant a Discord role based on message reactions or poll votes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^16.4.5"
+  }
+}
