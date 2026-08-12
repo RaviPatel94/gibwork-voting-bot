@@ -88,8 +88,6 @@ Enable Developer Mode first: **User Settings → Advanced → Developer Mode**.
 | `MESSAGE_ID` | Right-click the message/poll itself → Copy Message ID |
 | `ROLE_ID` | Server Settings → Roles → right-click the role → Copy Role ID |
 
-If you're not sure which message ID belongs to your poll, run the included helper script (see [Finding a poll's message ID](#finding-a-polls-message-id) below).
-
 ### 4. Install & run
 
 ```bash
@@ -141,18 +139,6 @@ Every step is validated **before** the role reset runs, so a bad config fails fa
 | No reactions/votes found | Logged, script completes with 0 users processed |
 
 Nothing in the script throws an uncaught exception — all failures are caught, logged with context, and the process exits cleanly.
-
----
-
-## Finding a poll's message ID
-
-If you're not sure a message ID actually points to a real poll, use the included helper:
-
-```bash
-node find-poll.js
-```
-
-It lists the last 20 messages in `CHANNEL_ID` from your `.env`, flags which ones have poll data, and prints their questions/answers/vote counts so you can confirm the right `MESSAGE_ID` before running the main script.
 
 ---
 
